@@ -1,6 +1,7 @@
 using TransactionDemo;
 
-var processor = new TransactionProcessor();
+var logger = new ConsoleLogger();
+var processor = new TransactionProcessor(logger);
 
 processor.Process("Alice", "Bob", 100.00m);
 Console.WriteLine();

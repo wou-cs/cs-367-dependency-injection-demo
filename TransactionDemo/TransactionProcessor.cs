@@ -2,11 +2,11 @@ namespace TransactionDemo;
 
 public class TransactionProcessor
 {
-    private readonly ConsoleLogger _logger;
+    private readonly ILogger _logger;
 
-    public TransactionProcessor()
+    public TransactionProcessor(ILogger logger)
     {
-        _logger = new ConsoleLogger();
+        _logger = logger;
     }
 
     public bool Process(string from, string to, decimal amount)
